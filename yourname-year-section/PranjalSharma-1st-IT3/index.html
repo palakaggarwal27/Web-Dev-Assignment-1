@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memory Game</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="left-card" id="left-card">
+            <div class="intro-settings side-card">
+                <section class="introduction">
+                    <h1>Memory Game</h1>
+                    <p>Pick a card, then pick another! If they match, you shall continue! Else, well... put 'em back and repeat it all over again.</p>
+                    <p>Unflip 'em all to win. Lets see how fast you can do it...</p>
+                    <h3>Rules: </h3>
+                    <p>The timer will start to count down when you press start.</p>
+                    <p>Each correct match will give you more time.</p>
+                    <p>Your score is decided by the amount of time left.</p>
+                </section>
+                <section class="settings">
+                    <button id="start">Start</button>
+                </section>
+                
+
+            </div>
+            <div class="game-menu side-card">
+                <button class="menu-button" id="reset">Reset</button>
+                <button class="menu-button" id="stop">Stop</button>
+                <section class="timer-section">
+                    <div class="time" id="time"><span class="timer" id="timer">20</span> <span class="unit">sec</span></div>
+                <h3><span class="extension" id="extend">+5</span></h3>
+                </section>
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-area" id="game-area"></div>
+        </div>
+        <div class="leaderboard side-card">
+            <h2>Leaderboard</h2>
+            <table class="leaderboardTable" id="leaderboardTable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="game-blocker" id="game-blocker"></div>
+
+        
+        <script src="script.js"></script>
+    </body>
+</html>
