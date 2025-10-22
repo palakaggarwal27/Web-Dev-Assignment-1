@@ -1,0 +1,21 @@
+<% layout('layout/boilerplate') %>
+<div class="home-container">
+    <h1 style="font-size: 3.2rem;">Welcome to ChatConnect</h1>
+    <p style="font-size: 1.6rem;">Choose your chat experience</p>
+    
+    <div class="option-buttons">
+        <form action="/chat" method="get">
+            <button type="submit" class="option-btn chat-btn">
+                <i class="fas fa-comments"></i>
+                <span>Chat with Friends</span>
+            </button>
+        </form>
+        
+        <form action="/bot" method="get">
+            <button type="submit" class="option-btn ai-btn">
+                <i class="fas fa-robot"></i>
+                <span>Talk with AI</span>
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<% layout('layout/boilerplate') %>
+
+<div class="ai-page-container">
+    <div class="chat-sidebar">
+        <div class="sidebar-header">
+            <form action="/ai/new" method="POST" class="new-chat-form">
+                <button type="submit" class="new-chat-btn">
+                    <i class="fas fa-plus"></i> New Chat
+                </button>
+            </form>
+        </div>
+        <div class="chat-sessions-list">
+            <% if (sessions && sessions.length > 0) { %>
+                <% sessions.forEach(function(session) { %>
+                    <a href="/ai/session/<%= session._id %>" 
+                       class="chat-session-item <%= session._id.toString() === activeSessionId.toString() ? 'active' : '' %>">
+                        <span class="session-title"><%= session.title %></span>
+                        <span class="session-time"><%= new Date(session.lastMessage).toLocaleString() %></span>
+                    </a>
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="chat-main">
+        <div class="chat-container">
+            <h1><i class="fas fa-robot"></i> AI Assistant</h1>
+
+            <% if (error) { %>
+                <div class="alert alert-error alert-flash"><%= error %></div>
+            <% } %>
+
+            <div class="messages-list">
+                <% if (history && history.length > 0) { %>
+                    <% history.forEach(function(item) { %>
+                        <div class="message-bubble <%= item.role === 'ai' ? 'received' : 'sent' %>">
+                            <div class="message-header">
+                                <span class="message-user"><%= item.role === 'ai' ? 'AI' : 'You' %></span>
+                                <span class="message-time"><%= new Date(item.timestamp).toLocaleString() %></span>
+                            </div>
+                            <div class="message-content"><%= item.content %></div>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <p class="no-messages">Start a new conversation with the AI</p>
+                <% } %>
+            </div>
+
+            <form class="send-message-form" action="/ai/chat" method="POST">
+                <div class="form-group">
+                    <input type="text" id="prompt" name="prompt" placeholder="Type your message..." required />
+                </div>
+                <button class="chat-btn" type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+            </form>
+        </div>
+    </div>
+</div>
