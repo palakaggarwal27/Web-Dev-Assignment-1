@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2a2a2a;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.side-card {
+    margin: 10px;
+    border: white 1px solid;
+    color: white;
+    padding: 10px;
+}
+
+.left-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-settings {
+    flex: 1;
+}
+
+.game-menu {
+    margin-top: 0;   
+}
+
+.game-area {
+    margin: 10px auto;
+    max-width: 470px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.card-wrapper {
+    width: 110px;
+    height: 150px;
+    perspective: 1000px;
+    
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-color: aliceblue;
+    z-index: 1;
+}
+
+.front:hover {
+    transition: transform 0.1s;
+    transform: rotate(2deg) scale(1.02);
+}
+
+.back {
+    background-color: coral;
+    transform: rotateY(180deg);
+}
+
+.game-blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 470px;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: not-allowed;
+}
+
