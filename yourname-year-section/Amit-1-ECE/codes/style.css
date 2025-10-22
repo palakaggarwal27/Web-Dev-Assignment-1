@@ -1,0 +1,818 @@
+/* importing */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Smooch+Sans:wght@100..900&display=swap');
+
+/* header */
+
+/* logo */
+
+.logo{
+    font-size: 40px;
+}
+
+.logo span{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logo u{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* navigation bar */
+
+.header{
+    position: fixed;
+    display: flex;
+    gap: 387px;
+    width: 194vh;
+    z-index: 10;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.nav{
+    padding:10px;
+    font-family: koulen;
+    font-size: 21px;
+}
+
+/* icons */
+
+.others{
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    position: relative;
+
+}
+
+.icons{
+    padding:10px;
+}
+
+.search img{
+    height: 28px;
+}
+
+.cart img{
+    height: 28px;
+}
+
+.user img{
+    height: 28px;
+}
+
+.sepration {
+    height: 1.5px;
+    background-color: black;
+    position: fixed;
+    top: 67px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+/* body */
+
+/* banner */
+
+.back{
+    height: 458px;
+    background-color: #808080b5;
+    border-radius: 54px;
+    position: relative;
+    top: 72px;
+    left: 87px;
+    width: 1321px;
+    z-index: 0;
+}
+
+.bannertext1{
+    font-size: 117px;
+    position: absolute;
+    top: 184px;
+    left: 219px;
+    font-family: Smooch Sans;
+}
+
+.bannertext2{
+    font-size: 117px;
+    position: absolute;
+    top: 290px;
+    left: 450px;
+    font-family: Smooch Sans;
+}
+
+.product1{
+    position: absolute;
+    top: 148px;
+    left: 837px;
+}
+
+.product1 img{
+    max-width: 100%;
+    height: 275px;
+}
+
+/* categories */
+
+.cat{
+    position: relative;
+    top: 60px;
+}
+
+.box{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.Fragrances{
+    height: 178px;
+    width: 271px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.text1{
+    font-size: 34px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product2{
+    position: relative;
+    top: 18px;
+    left: 19px;
+}
+
+.product2 img{
+    height: 98px;
+}
+
+.product3{
+    position: relative;
+    top: -101px;
+    left: 139px;
+}
+
+.product3 img{
+    height: 128px;
+}
+
+.Face{
+    height: 178px;
+    width: 271px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.text2{
+    font-size: 34px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product4{
+    position: relative;
+    top: 18px;
+    left: 19px;
+}
+
+.product4 img{
+    height: 98px;
+}
+
+.product5{
+    position: relative;
+    top: -101px;
+    left: 139px;
+}
+
+.product5 img{
+    height: 128px;
+}
+
+
+.Hair{
+    height: 178px;
+    width: 271px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.text3{
+    font-size: 34px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product6{
+    position: relative;
+    top: 18px;
+    left: 19px;
+}
+
+.product6 img{
+    height: 98px;
+}
+
+.product7{
+    position: relative;
+    top: -101px;
+    left: 139px;
+}
+
+.product7 img{
+    height: 128px;
+}
+
+.Body{
+    height: 178px;
+    width: 271px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.text4{
+    font-size: 34px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product8{
+    position: relative;
+    top: 18px;
+    left: 40px;
+}
+
+.product8 img{
+    height: 112px;
+}
+
+.product9{
+    position: relative;
+    top: -111px;
+    left: 159px;
+}
+
+.product9 img{
+    height: 113px;
+}
+
+/* User choice */
+
+.userc{
+    position: relative;
+    top: -38px;
+}
+
+.box1{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+.userchoice{
+    position: relative;
+    top: -98px;
+}
+
+.potd{
+    height: 348px;
+    width: 340px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.uctext1{
+    font-size: 30px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product10{
+    position: relative;
+    top: -2px;
+    left: 74px;
+}
+
+.product10 img{
+    height: 173px;
+}
+
+.pn1{
+    position: relative;
+    top: -10px;
+    left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bs{
+    height: 348px;
+    width: 340px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.uctext2{
+    font-size: 30px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product11{
+    position: relative;
+    top: -2px;
+    left: 74px;
+}
+
+.product11 img{
+    height: 173px;
+}
+
+.pn2{
+    position: relative;
+    top: -10px;
+    left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.vc{
+    height: 348px;
+    width: 340px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.uctext3{
+    font-size: 30px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product12{
+    position: relative;
+    top: -2px;
+    left: 74px;
+}
+
+.product12 img{
+    height: 173px;
+}
+
+.pn3{
+    position: relative;
+    top: -10px;
+    left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.price{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.btn{
+    position: relative;
+    top: -10px;
+    left: 165px;
+    font-size: 28px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.price strike{
+    color: gray;
+}
+
+/* shop by price */
+
+.sbp{
+    position: relative;
+    top: -38px;
+}
+
+.boxes2 {
+    position: relative;
+    top: -102px;
+}
+
+.box2{
+    display: inline-block;
+    margin: 15px;
+}
+
+.u499{
+    height: 178px;
+    width: 271px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.ptext1{
+    position: relative;
+    top: 10px;
+    left: 56px;
+    font-size: 40px;
+}
+
+.p1{
+    position: relative;
+    top: 2px;
+    left: 61px;
+    font-size: 40px;
+    background-color: gray;
+    width: 76px;
+    padding-top: 2px;
+    padding-bottom: 20px;
+    height: 32px;
+    border-radius: 20px;
+    padding-left: 28px;
+    padding-right: 38px;
+}
+
+.u799{
+    height: 178px;
+    width: 271px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.ptext2{
+    position: relative;
+    top: 10px;
+    left: 56px;
+    font-size: 40px;
+}
+
+.p2{
+    position: relative;
+    top: 2px;
+    left: 61px;
+    font-size: 40px;
+    background-color: gray;
+    width: 76px;
+    padding-top: 2px;
+    padding-bottom: 20px;
+    height: 32px;
+    border-radius: 20px;
+    padding-left: 28px;
+    padding-right: 38px;
+}
+
+.u999{
+    height: 178px;
+    width: 271px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.ptext3{
+    position: relative;
+    top: 10px;
+    left: 56px;
+    font-size: 40px;
+}
+
+.p3{
+    position: relative;
+    top: 2px;
+    left: 61px;
+    font-size: 40px;
+    background-color: gray;
+    width: 76px;
+    padding-top: 2px;
+    padding-bottom: 20px;
+    height: 32px;
+    border-radius: 20px;
+    padding-left: 28px;
+    padding-right: 38px;
+}
+
+.u1999{
+    height: 178px;
+    width: 271px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.ptext4{
+    position: relative;
+    top: 10px;
+    left: 56px;
+    font-size: 40px;
+}
+
+.p4{
+    position: relative;
+    top: 2px;
+    left: 61px;
+    font-size: 40px;
+    background-color: gray;
+    width: 76px;
+    padding-top: 2px;
+    padding-bottom: 20px;
+    height: 32px;
+    border-radius: 20px;
+    padding-left: 28px;
+    padding-right: 38px;
+}
+
+/* New Arrivals */
+
+.newa{
+    position: relative;
+    top: -75px;
+}
+
+.box3{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+.NewArrivals{
+    position: relative;
+    top: -133px;
+}
+
+.na1{
+    height: 348px;
+    width: 340px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.natext1{
+    font-size: 30px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product13{
+    position: relative;
+    top: 2px;
+    left: 74px;
+}
+
+.product13 img{
+    height: 173px;
+}
+
+.napn2{
+    position: relative;
+    top: -10px;
+    left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.na2{
+    height: 348px;
+    width: 340px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.natext2{
+    font-size: 30px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product14{
+    position: relative;
+    top: 2px;
+    left: 74px;
+}
+
+.product14 img{
+    height: 173px;
+}
+
+.napn2{
+    position: relative;
+    top: -10px;
+    left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.na3{
+    height: 348px;
+    width: 340px;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    left: 34px;
+}
+
+.natext3{
+    font-size: 30px;
+    position: relative;
+    left: 19px;
+    font-family:monospace;;
+}
+
+.product15{
+    position: relative;
+    top: 2px;
+    left: 74px;
+}
+
+.product15 img{
+    height: 173px;
+}
+
+.napn3{
+    position: relative;
+    top: -10px;
+    left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.price{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.btn{
+    position: relative;
+    top: -10px;
+    left: 165px;
+    font-size: 28px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.price strike{
+    color: gray;
+}
+
+/* updates */
+
+.updates{
+    position: relative;
+    top: -17px;
+    left: 538px;
+    width: 460px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.updatetext1{
+    font-size: 25px;
+}
+
+/* socials */
+
+.line1{
+    height: 2px;
+    width: 520px;
+    background-color: black;
+    position: relative;
+    top: 15px;
+}
+
+.socials{
+    position: relative;
+    top: -14px;
+    left: 623px;
+    width: 460px;
+}
+
+.social{
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.social img{
+    height: 50px;
+    width: 50px;
+}
+
+.line2{
+    height: 2px;
+    width: 590px;
+    background-color: black;
+    position: relative;
+    top: -43px;
+    left: 909px
+}
+
+/* footer */
+
+footer{
+    margin: 10px;
+    background-color: black;
+    height: 250px;
+}
+
+.container{
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 75px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.bottom-bar{
+    position: relative;
+    top: 55px;
+    color: white;
+}
+
+.links{
+    color: white;
+}
+
+@media  screen and (max-width:1300px) {
+    .nav{
+        max-width: 80px;
+    }
+    .banner{
+        max-width: 100vw;
+    }
+    .text{
+        width: 420px;
+    }
+
+    .product1{
+        width: 400px;
+    }
+
+    .boxes{
+        width: 1199px;
+    }
+
+    .boxes1{
+        width: 1199px;
+    }
+
+    .boxes2{
+        width: 1238px;
+    }
+
+    .boxes3{
+        width: 1199px;
+    }
+
+    .footer{
+        width: 1199px;
+    }
+}
