@@ -1,0 +1,401 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+h1{
+    text-align: center;
+    margin-top: 2vh;
+    font-weight: bold;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(20, 91, 53);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#status{
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(20, 91, 53);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.result{
+    text-align: center;
+    position:absolute;
+    left:30%;
+    top:40%;
+    z-index:999;
+    margin-top: 2vh;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(255, 0, 0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#X{
+    display:none;
+    animation: fadeIn 0.5s forwards;
+}
+
+#O{
+    display:none;
+    animation: fadeIn 0.5s forwards;
+}
+
+#draw{
+    display:none;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+#resetBtn{
+    display: block;
+    margin: auto;
+    margin-top: 1vh;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: rgb(20, 91, 53);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#resetBtn:hover {
+    background-color: rgb(30, 120, 70);
+    transform: scale(1.05);
+}
+
+.scoreBoard{
+    width: 60vw;
+    height: 4vw;
+    margin: auto;
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(20, 91, 53);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#gameBoard {
+    width: calc(60vw + 24px);
+    height: calc(60vw + 24px);
+    margin: auto;
+    margin-top: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(20, 91, 53);
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    border: 10px solid rgb(179, 103, 11);
+    box-shadow:inset 5px 4px 8px rgba(0, 0, 0, 0.5),inset -5px -4px 7px rgba(0, 0, 0, 0.5);
+
+}
+
+.vertical{
+    border: 2px solid rgb(186, 174, 174);
+    width:0;
+    height: 95%;
+    position:absolute;
+}
+
+.vertical.right{
+    left:calc(40vw + 2px);
+}
+
+.vertical.left{
+    left:20vw;}
+
+.horizontal{
+    border: 2px solid rgb(186, 174, 174);
+    width: 95%;
+    height: 0;
+    position:absolute;
+}
+
+.horizontal.down{
+    top:calc(40vw + 2px);
+}
+
+.horizontal.up{
+    top:20vw;
+}
+
+.cell{
+    color: white;
+    width:20vw;
+    height: 20vw;
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    opacity:0;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    cursor: pointer;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@media (max-height: 699px) {
+    #gameBoard {
+        width: calc(60vh + 24px);
+        height: calc(60vh + 24px);
+    }
+
+    .cell {
+        width: 20vh;
+        height: 20vh;
+        font-size: 70px;
+    }
+
+    .scoreBoard {
+        width: 60vh;
+        height: 4vh;
+        font-size: 20px;
+    }
+
+    .horizontal.down {
+        top: calc(40vh + 2px);
+    }
+
+    .horizontal.up {
+        top: 20vh;
+    }
+
+    .vertical.right {
+        left: calc(40vh + 2px);
+    }
+
+    .vertical.left {
+        left: 20vh;
+    }
+}
+
+@media (min-width: 700px){
+    #gameBoard {
+        width: calc(60vh + 24px);
+        height: calc(60vh + 24px);
+    }
+
+    .cell {
+        width: 20vh;
+        height: 20vh;
+        font-size: 70px;
+    }
+
+    .scoreBoard {
+        width: 60vh;
+        height: 4vh;
+        font-size: 20px;
+    }
+
+    .horizontal.down {
+        top: calc(40vh + 2px);
+    }
+
+    .horizontal.up {
+        top: 20vh;
+    }
+
+    .vertical.right {
+        left: calc(40vh + 2px);
+    }
+
+    .vertical.left {
+        left: 20vh;
+    }
+}
+
+@media (max-width:399px){
+    #gameBoard {
+        width: calc(90vw + 24px);
+        height: calc(90vw + 24px);
+    }
+
+    .cell {
+        width: 30vw;
+        height: 30vw;
+        font-size: 100px;
+    }
+
+    .scoreBoard {
+        width: 90vw;
+        height: 6vw;
+        font-size: 30px;
+    }
+
+    .horizontal.down {
+        top: calc(60vw + 2px);
+    }
+
+    .horizontal.up {
+        top: 30vw;
+    }
+
+    .vertical.right {
+        left: calc(60vw + 2px);
+    }
+
+    .vertical.left {
+        left: 30vw;
+    }
+
+    #resetBtn{
+        margin-top: 20vw;
+    }
+}
+
+.winline{
+    position:absolute;
+    background-color: red;
+    border-radius: 5px;
+}
+
+#winHorizontalTop{
+    top:calc(16.66%);
+    left:4%;
+    width:90%;
+    height:3px;
+    display:none;
+    animation: horizontalLine 0.5s forwards;
+}
+
+#winHorizontalMiddle{
+    top:calc(50%);
+    left:4%;
+    width:90%;
+    height:3px;
+    display: none;
+    animation: horizontalLine 0.5s forwards;
+}
+
+#winHorizontalBottom{
+    bottom:16.66%;
+    left:4%;
+    width:90%;
+    height:3px;
+    display: none;
+    animation: horizontalLine 0.5s forwards;
+}
+
+#winVerticalLeft{
+    top:4%;
+    left:16.66%;
+    width:3px;
+    height:90%;
+    display: none;
+    animation : verticalLine 0.5s forwards;
+}
+
+#winVerticalMiddle{
+    top:4%;
+    left:50%;
+    width:3px;
+    height:90%;
+    display: none;
+    animation : verticalLine 0.5s forwards;
+}
+
+#winVerticalRight{
+    top:4%;
+    right:16.66%;
+    width:3px;
+    height:90%;
+    display: none;
+    animation : verticalLine 0.5s forwards;
+}
+
+#winDiagonalLeft{
+    width:3px;
+    height:121%;
+    transform: rotate(-45deg);
+    display:none;
+    animation : diagonalLine 0.5s forwards;
+
+}
+
+#winDiagonalRight{
+    width:3px;
+    height:121%;
+    transform: rotate(45deg);
+    display: none;
+    animation : diagonalLine 0.5s forwards;
+
+}
+
+@keyframes diagonalLine {
+    from {
+        height: 0;
+        width:0;
+    }
+    to {
+        height: 121%;
+        width:3px;
+    }
+}
+
+@keyframes verticalLine {
+    from {
+        height: 0;
+    }
+    to {
+        height: 90%;
+    }
+}
+
+@keyframes horizontalLine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 90%;
+    }
+}
